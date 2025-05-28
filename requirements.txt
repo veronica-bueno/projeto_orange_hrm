@@ -2,3 +2,6 @@ robotframework
 robotframework-seleniumlibrary
 robotframework-browser
 selenium
+Python - Versão 3.x
+WebDriver do Chrome
+Navegador Google Chrome
