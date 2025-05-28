@@ -1,13 +1,14 @@
 *** Settings ***
-Documentation    Documentação das keywords de Login válido
+Documentation    Documentação Keywords da página de login com credenciais válidas
 Library    SeleniumLibrary
 Resource    ../config/config.resource
 
 *** Keywords ***
 Realizar o login
-    Wait Until Element Is Visible    locator=//input[@placeholder='Username']
-    Input Text    locator=//input[@placeholder='Username']   text=${ADMIN_USERNAME} 
-    Input Password    locator=//input[@placeholder='Password']    password=${ADMIN_PASSWORD}
+    Wait Until Element Is Visible    locator=//input[@placeholder='Username']    # Aguarda o elemento estar visível
+    Input Text    locator=//input[@placeholder='Username']   text=${ADMIN_USERNAME}     # Username correto
+    Input Password    locator=//input[@placeholder='Password']    password=${ADMIN_PASSWORD}    # Password correto
 Clicar no botão <login>
-    Click Button    locator=//button[normalize-space()='Login']
     Capture Page Screenshot
+    Click Button    locator=//button[normalize-space()='Login']    # Botão de ação de <login>
+    

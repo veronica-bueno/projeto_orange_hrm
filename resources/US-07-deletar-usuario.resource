@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Documentação das keywords Página principal|Dashboard
+Documentation    Documentação das keywords da Página de deletar um usuário do sistema com sucesso
 Library    SeleniumLibrary
 Resource    ../config/config.resource
 Resource    US-01-login-valido.resource
@@ -10,9 +10,9 @@ Resource    US-01-login-valido.resource
 
 *** Keywords ***
 Acessar cadastro de administrador
-    Realizar o login
+    Realizar o login     # Keywords User Story 1
     Clicar no botão <login>
-Deletar o cadastro de usuário existente
+Deletar o cadastro de um usuário existente
     Wait Until Element Is Visible    locator=//ul[@class='oxd-main-menu']
     Click Element    xpath=//a[.//span[text()='Admin']]    # Menu: Admin
     Wait Until Element Is Visible    locator=(//h5[normalize-space()='System Users'])[1]
@@ -24,3 +24,4 @@ Deletar o cadastro de usuário existente
     Capture Page Screenshot
     Click Button    locator=(//button[normalize-space()='Yes, Delete'])[1]
     Wait Until Element Is Visible    locator=(//span[normalize-space()='No Records Found'])[1]
+    Capture Page Screenshot    # Para confirmar que não existe resultados para a busca, confirmando o usuário deletado

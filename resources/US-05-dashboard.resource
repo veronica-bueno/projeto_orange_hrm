@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Documentação das keywords Página principal|Dashboard
+Documentation    Documentação das keywords Página principal | Dashboard
 Library    SeleniumLibrary
 Resource    ../config/config.resource
 Resource    US-01-login-valido.resource
@@ -9,12 +9,13 @@ Resource    US-01-login-valido.resource
 
 *** Keywords ***
 Validar se itens do menu lateral estão visíveis e clicaveis
-    Realizar o login
+    Realizar o login    # Keywords da User Story 1
     Clicar no botão <login>
     Wait Until Element Is Visible    locator=//input[@placeholder='Search']    # Barra de pesquisa
     Element Should Be Visible    locator=//input[@placeholder='Search']
     Click Element    xpath=//a[.//span[text()='Admin']]    # Menu: Admin
     Wait Until Element Is Visible    locator=//h6[normalize-space()='Admin']    # Confirmar que mudou para página Admin
+    Capture Page Screenshot
     Click Element    xpath=//a[.//span[text()='PIM']]    # Menu: PIM
     Wait Until Element Is Visible    locator=//h6[normalize-space()='PIM']    # Confirmar que mudou para página PIM
     Click Element    xpath=//a[.//span[text()='Leave']]    # Menu: Leave
@@ -33,6 +34,7 @@ Validar se itens do menu lateral estão visíveis e clicaveis
     Wait Until Element Is Visible    locator=//h6[normalize-space()='Directory']    # Confirmar que mudou para página Directory
     Click Element    xpath=//a[.//span[text()='Maintenance']]    # Menu: Maintenance
     Wait Until Element Is Visible    locator=//h6[normalize-space()='Administrator Access']    # Confirmar que mudou para página de Administrator Access
+    Capture Page Screenshot
     Go Back
     Click Element    xpath=//a[.//span[text()='Claim']]    # Menu: Claim
     Wait Until Element Is Visible    locator=//h6[normalize-space()='Claim']    # Confirmar que mudou para página Claim
@@ -55,11 +57,14 @@ Validar cabeçalho
     Click Element    xpath=//span[@class='oxd-userdropdown-tab']
     Click Element    xpath=//a[normalize-space()='About']  # Opção About no Menu/Cabeçalho
     Wait Until Element Is Visible    locator=//h6[normalize-space()='About']    # Espera abrir a tela de "About" e confirma
+    Sleep    1s    # Para carregar as informações antes do Screenshot
+    Capture Page Screenshot
     Click Element    locator=//button[normalize-space()='×']    # Fecha a tela de "About" para acessar outras opções do Menu/Cabeçalho
     Wait Until Element Is Visible    xpath=//span[@class='oxd-userdropdown-tab']
     Click Element    xpath=//span[@class='oxd-userdropdown-tab']    # Opção About no Menu/Cabeçalho
     Wait Until Element Is Visible    locator=//a[normalize-space()='Support']    # Opção "Support" no menu/cabeçalho 
     Click Element    xpath=//a[normalize-space()='Support']
     Wait Until Page Contains    text=Customer Support
+    Capture Page Screenshot
 
 
