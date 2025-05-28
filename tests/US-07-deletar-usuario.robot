@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Página de deletar um usuário do sistema com sucesso
+Documentation    Testes para verificar a funcionalidade de deletar um usuário existente no sistema OrangeHRM.
 Library    SeleniumLibrary
 Resource    ../config/config.resource
 Resource    ../resources/US-07-deletar-usuario.resource
@@ -9,6 +9,9 @@ Suite Teardown    Close Browser
 
 *** Test Cases ***
 US-07 :: User Story 7 - Deletar um usuário do sistema com sucesso
+    [Documentation]    Este teste verifica o fluxo de deleção de um usuário existente 
+    ...                através da interface de administração do sistema.
+    
     [Tags]    deletar_usuario
     
     Acessar cadastro de administrador

@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Documentação das keywords de Logout com sucesso
+Documentation    Keywords para o teste de logout com sucesso.
 Library    SeleniumLibrary
 Resource    ../config/config.resource
 Resource    US-01-login-valido.resource

@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Documentação das keywords de Login com credenciais incorretas
+Documentation    Keywords para os testes de login com credenciais incorretas.
 Library    SeleniumLibrary
 Resource    ../config/config.resource
 Resource    US-01-login-valido.resource

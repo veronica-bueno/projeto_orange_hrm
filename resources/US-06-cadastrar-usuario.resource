@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Documentação das keywords Página de cadastro de usuário com sucesso
+Documentation    Keywords para o teste de cadastro de um novo usuário.
 Library    SeleniumLibrary
 Resource    ../config/config.resource
 Resource    US-01-login-valido.resource

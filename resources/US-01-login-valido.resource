@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Documentação Keywords da página de login com credenciais válidas
+Documentation    Keywords reutilizáveis para a funcionalidade de login com credenciais válidas.
 Library    SeleniumLibrary
 Resource    ../config/config.resource
 

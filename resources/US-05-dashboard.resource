@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Documentação das keywords Página principal | Dashboard
+Documentation    Keywords para os testes da página Dashboard.
 Library    SeleniumLibrary
 Resource    ../config/config.resource
 Resource    US-01-login-valido.resource

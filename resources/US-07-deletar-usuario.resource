@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Documentação das keywords da Página de deletar um usuário do sistema com sucesso
+Documentation    Keywords para o teste de deletar um usuário do sistema com sucesso.
 Library    SeleniumLibrary
 Resource    ../config/config.resource
 Resource    US-01-login-valido.resource
