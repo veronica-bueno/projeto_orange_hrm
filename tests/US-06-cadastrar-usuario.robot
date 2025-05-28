@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Página de cadastro de usuário
+Documentation    Página de cadastro de usuário com sucesso
 Library    SeleniumLibrary
 Resource    ../config/config.resource
 Resource    ../resources/US-06-cadastrar-usuario.resource

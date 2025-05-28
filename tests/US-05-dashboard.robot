@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Página principal|Dashboard
+Documentation    Documentação da Página principal | Dashboard
 Library    SeleniumLibrary
 Resource    ../config/config.resource
 Resource    ../resources/US-05-dashboard.resource
