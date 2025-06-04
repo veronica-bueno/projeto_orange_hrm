@@ -4,11 +4,11 @@
 - Este projeto demonstra a automação de testes de interface de usuário (UI) para a aplicação web OrangeHRM Live Demo, utilizando o Robot Framework e a SeleniumLibrary.
 - Desenvolvido como parte de um portfólio de QA, o objetivo é validar as principais funcionalidades da aplicação através de testes automatizados, demonstrando proficiência em automação de testes web.
 
-##### Objetivo do Projeto
+#### Objetivo do Projeto
 - O principal objetivo deste projeto é automatizar os fluxos de trabalho críticos e as funcionalidades dos módulos do OrangeHRM, garantindo a qualidade e o comportamento esperado da aplicação. 
 - Isso inclui validações de login, navegação, gerenciamento de dados e outras operações essenciais, com foco em cenários de sucesso e falha.
 
-##### Funcionalidades Testadas
+#### Funcionalidades Testadas
 - Os testes automatizados cobrem as seguintes áreas e módulos da aplicação OrangeHRM, conforme a organização dos arquivos de teste:
 
 * **Login:**
@@ -29,14 +29,14 @@
 
     * Deletar um usuário existente do sistema com sucesso através da interface de administração (```US-07-deletar-usuario```).
 
-##### Tecnologias e Ferramentas Utilizadas
+#### Tecnologias e Ferramentas Utilizadas
 * Robot Framework
 * Python
 * SeleniumLibrary
 * Navegador Web: Chrome, Firefox ou Edge
 * Webdriver: compatível com o seu navegador instalado e configurado para permitir a automação.
 
-##### Pré-requisitos
+#### Pré-requisitos
 * Para configurar e executar este projeto em sua máquina, você precisará ter instalado:
 
     * Python 3.6+: Baixe e instale a versão mais recente em python.org.
@@ -50,7 +50,7 @@
 * **Importante:** Certifique-se de que o WebDriver esteja no seu PATH do sistema ou na mesma pasta onde você executa os testes.
 
 
-##### Instalação das Dependências
+#### Instalação das Dependências
 1. **Clone o repositório:**
 ```bash
     git clone https://github.com/veronica-bueno/projeto_orange_hrm
@@ -69,7 +69,7 @@
 
 * (Este arquivo ```requirements.txt``` deve conter as bibliotecas listadas na seção "Tecnologias e Ferramentas Utilizadas", como ```robotframework```, ```robotframework-seleniumlibrary```, etc.)
 
-##### Estrutura do Projeto
+#### Estrutura do Projeto
 
 A estrutura de pastas do projeto está organizada da seguinte forma:
 ```
@@ -104,7 +104,7 @@ projeto_orange_hrm/
 └── requirements.txt      # Lista de dependências Python
 ```
 
-##### Configuração
+#### Configuração
 * ```config/config.resource```: Este arquivo é crucial e deve conter a URL base do OrangeHRM e quaisquer credenciais de login (usuário/senha) que seus testes utilizem. Recomenda-se fortemente usar variáveis para esses dados, como utilizado no código atual:
 ```
     *** Variables ***
@@ -113,7 +113,7 @@ projeto_orange_hrm/
     ${ADMIN_USERNAME}       Admin
     ${ADMIN_PASSWORD}       admin123
 ```
-##### Como Executar os Testes
+#### Como Executar os Testes
 **1. Navegue até a pasta raiz do projeto:**
 ```bash
     cd projeto_orange_hrm
@@ -128,7 +128,7 @@ robot -d reports tests/
 ```
 - A opção ```-d reports``` criará uma pasta ```reports``` na raiz do projeto e salvará todos os logs, relatórios e screenshots.
 
-##### Visualização dos Relatórios
+#### Visualização dos Relatórios
 Após a execução dos testes, os relatórios serão gerados na pasta ```reports/```. Você pode abri-los em seu navegador web:
 
 * ```reports/report.html```: Relatório geral da execução, com resumo e resultados de cada teste.
