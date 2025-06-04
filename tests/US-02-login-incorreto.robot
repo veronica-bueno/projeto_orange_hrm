@@ -19,7 +19,6 @@ US-02 :: User Story 2 - Falha ao logar com credenciais inválidas
 
     Digitar um username incorreto
     Digitar uma password correta
-    Clicar no botão de login
     Mensagem de credenciais inválidas
     Digitar um username correto
     Digitar uma password incorreta 
