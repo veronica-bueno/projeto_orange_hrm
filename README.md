@@ -1,8 +1,10 @@
 # projeto_orange_hrm
 
 ### Automação Web OrangeHRM com Robot Framework
-- Este projeto demonstra a automação de testes de interface de usuário (UI) para a aplicação web OrangeHRM Live Demo, utilizando o Robot Framework e a SeleniumLibrary.
+- Este projeto demonstra a automação de testes de interface de usuário (UI) para a aplicação web OrangeHRM, utilizando o Robot Framework e a SeleniumLibrary.
 - Desenvolvido como parte de um portfólio de QA, o objetivo é validar as principais funcionalidades da aplicação através de testes automatizados, demonstrando proficiência em automação de testes web.
+
+* **Acesse a aplicação web: [OrangeHRM](https://opensource-demo.orangehrmlive.com/web/index.php/auth/login)**
 
 #### Objetivo do Projeto
 - O principal objetivo deste projeto é automatizar os fluxos de trabalho críticos e as funcionalidades dos módulos do OrangeHRM, garantindo a qualidade e o comportamento esperado da aplicação. 
