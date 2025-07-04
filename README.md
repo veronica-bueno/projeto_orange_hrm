@@ -84,21 +84,17 @@ projeto_orange_hrm/
 │   ├── report.html
 │   └── selenium-screenshot-*.png   # Evidências
 ├── resources/            # Keywords reutilizáveis para cada funcionalidade
-│   ├── US-01-login-valido.resource
-│   ├── US-02-login-incorreto.resource
-│   ├── US-03-login-campos-obrigatórios.resource
-│   ├── US-04-logout.resource
-│   ├── US-05-dashboard.resource
-│   ├── US-06-cadastrar-usuario.resource
-│   └── US-07-deletar-usuario.resource
+│   ├── 1.login.resource
+│   ├── 2.logout.resource
+│   ├── 3.dashboard.resource
+│   ├── 4.cadastro.resource
+│   └── 5.delete.resource
 ├── tests/                # Arquivos de teste (.robot) organizados por funcionalidade
-│   ├── US-01-login-valido.robot
-│   ├── US-02-login-incorreto.robot
-│   ├── US-03-login-campos-obrigatórios.robot
-│   ├── US-04-logout.robot
-│   ├── US-05-dashboard.robot
-│   ├── US-06-cadastrar-usuario.robot
-│   └── US-07-deletar-usuario.robot
+│   ├── 1.login.robot
+│   ├── 2.logout.robot
+│   ├── 3.dashboard.robot
+│   ├── 4.cadastro.robot
+│   └── 5.delete.robot
 ├── user_story/           # Pasta para documentação das User Stories (ex: user_story.txt)
 │   └── user_story.txt
 ├── .gitignore            # Arquivo para ignorar arquivos/pastas no Git
