@@ -1,5 +1,7 @@
 *** Settings ***
-Documentation    Testes para verificar a funcionalidade de login no sistema OrangeHRM.
+Documentation    Este arquivo contém os testes automatizados para validar a funcionalidade de login do sistema OrangeHRM.
+...              Abrange cenários de login bem-sucedido, tentativas com credenciais inválidas,
+...              campos em branco, e validação de mensagens de erro esperadas na tela de login.
 Library    SeleniumLibrary
 Resource    ../config/config.resource
 Resource    ../resources/login.resource
@@ -9,10 +11,11 @@ Suite Teardown    Close Browser
 
 *** Test Cases ***
 Tela de Login
-    [Documentation]    Este teste verifica o fluxo de login utilizando um usuário 
-    ...                administrador com credenciais válidas e tentativas de login inválidas.
+    [Documentation]    Este teste verifica o fluxos de login utilizando um usuário 
+    ...                administrador com credenciais válidas e tentativas de login inválidas e/ou ausêntes, 
+    ...                além de validar mensagens da tela.
     
-    [Tags]    login    login_valido    credenciais_validas    login_invalido    credenciais_invalidas
+    [Tags]    login    login_valido    credenciais_validas    login_invalido    credenciais_invalidas    credenciais_ausentes
 
     Realizar o login com sucesso    CLOSE_BROWSER=${True}
     Tentativa de login com username incorreto e password correta
