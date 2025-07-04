@@ -18,3 +18,7 @@ ${USER_PASSWORD}    fernanda123    # Senha do usuário para cadastro de novo usu
 Abrir a página Orange HRM
     Open Browser    ${URL_PRINCIPAL}    ${BROWSER}
     Maximize Browser Window
+    Wait Until Element Is Visible    locator=//input[@placeholder='Username']
+
+Clicar no botão <login> 
+    Click Button    locator=//button[normalize-space()='Login']    # Botão de ação de <login>
