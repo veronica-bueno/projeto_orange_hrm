@@ -84,17 +84,17 @@ projeto_orange_hrm/
 │   ├── report.html
 │   └── selenium-screenshot-*.png   # Evidências
 ├── resources/            # Keywords reutilizáveis para cada funcionalidade
-│   ├── 1.login.resource
-│   ├── 2.logout.resource
-│   ├── 3.dashboard.resource
-│   ├── 4.cadastro.resource
-│   └── 5.delete.resource
+│   ├── cadastro.resource
+│   ├── dashboard.resource
+│   ├── delete.resource
+│   ├── login.resource
+│   └── logout.resource
 ├── tests/                # Arquivos de teste (.robot) organizados por funcionalidade
-│   ├── 1.login.robot
-│   ├── 2.logout.robot
-│   ├── 3.dashboard.robot
-│   ├── 4.cadastro.robot
-│   └── 5.delete.robot
+│   ├── cadastro.robot
+│   ├── dashboard.robot
+│   ├── delete.robot
+│   ├── login.robot
+│   └── logout.robot
 ├── user_story/           # Pasta para documentação das User Stories (ex: user_story.txt)
 │   └── user_story.txt
 ├── .gitignore            # Arquivo para ignorar arquivos/pastas no Git
