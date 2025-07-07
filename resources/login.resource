@@ -27,6 +27,7 @@ Tentativa de login com username incorreto e password correta
     Input Text    locator=//input[@placeholder='Username']   text=${USERNAME_INCORRETO}    # Preenche o campo 'Username' com um nome de usuário incorreto
     Input Password    locator=//input[@placeholder='Password']    password=${ADMIN_PASSWORD}     # Preenche o campo 'Password' com a senha correta do administrador
     Clicar no botão <login>
+    Capture Page Screenshot
 Tentativa de login com username correto e password incorreta
     Wait Until Element Is Visible    locator=//input[@placeholder='Username']
     Input Text    locator=//input[@placeholder='Username']    text=${ADMIN_USERNAME}    
