@@ -1,0 +1,111 @@
+### Test Case ###
+
+Casos de Testes em Gherkin/PT
+
+🔑 Login
+    Funcionalidade: Login no Sistema OrangeHRM
+    Como um usuário do sistema OrangeHRM,
+    Para acessar as funcionalidades do sistema,
+    Eu quero conseguir fazer login com minhas credenciais.
+
+    Cenário: Login com Credenciais Válidas
+        Dado que estou na página de login do OrangeHRM
+        Quando eu insiro um username válido e uma password válida e clico no botão "Login"
+        Então o sistema deve me redirecionar para a página principal (Dashboard)
+
+    Cenário: Falha ao Logar com Username Inválido
+        Dado que estou na página de login do OrangeHRM
+        Quando eu insiro um username incorreto e uma password correta e clico no botão "Login"
+        Então uma mensagem de erro "Invalid credentials" deve ser exibida
+
+    Cenário: Falha ao Logar com Password Inválida
+        Dado que estou na página de login do OrangeHRM
+        Quando eu insiro um username correto e uma password incorreta e clico no botão "Login"
+        Então uma mensagem de erro "Invalid credentials" deve ser exibida
+
+    Cenário: Validação de Campo Username Obrigatório
+        Dado que estou na página de login do OrangeHRM
+        Quando eu deixo o campo de username em branco, insiro uma password válida e clico no botão "Login"
+        Então uma mensagem de erro indicando "Required" deve ser exibida para o campo de username
+
+    Cenário: Validação de Campo Password Obrigatório
+        Dado que estou na página de login do OrangeHRM
+        Quando eu insiro um username válido, deixo o campo de password em branco e clico no botão "Login"
+        Então uma mensagem de erro indicando "Required" deve ser exibida para o campo de password
+
+🚪 Logout
+    Funcionalidade: Logout do Sistema OrangeHRM
+    Como um usuário do sistema OrangeHRM,
+    Para garantir a segurança da minha conta,
+    Eu quero ter a opção de fazer logout da minha sessão.
+
+    Cenário: Realizar Logout com Sucesso
+        Dado que estou logado no sistema OrangeHRM
+        Quando eu clico no menu do usuário e seleciono a opção "Logout"
+        Então o sistema deve me redirecionar para a página de login
+
+🖥️ Dashboard
+    Funcionalidade: Visualização e Interação com o Dashboard
+    Como um usuário logado no sistema OrangeHRM,
+    Para navegar e acessar informações relevantes,
+    Eu quero visualizar e interagir com os elementos principais do Dashboard.
+
+    Cenário: Itens do Menu Lateral Visíveis e Clicáveis
+        Dado que estou logado no sistema OrangeHRM
+        Então os itens do menu lateral (Admin, PIM, Leave, Time, etc.) devem estar visíveis
+        E os itens do menu lateral devem ser clicáveis, permitindo a navegação para as respectivas seções
+
+    Cenário: Botão de Recolher/Expandir o Menu Lateral
+        Dado que estou logado no sistema OrangeHRM
+        Quando eu clico no botão para recolher/expandir o menu lateral
+        Então o menu lateral deve ser recolhido/expandido corretamente
+
+    Cenário: Campo de Pesquisa Visível e Funcional
+        Dado que estou logado no sistema OrangeHRM
+        Então o campo de pesquisa deve estar visível
+        E o campo de pesquisa deve permitir a inserção de texto
+
+    Cenário: Cabeçalho e Opções de Usuário Acessíveis
+        Dado que estou logado no sistema OrangeHRM
+        Então o cabeçalho (incluindo o menu do usuário) deve estar visível
+        E as opções "About" e "Support" no menu do usuário devem ser acessíveis e funcionais
+
+➕ Cadastro de Usuário
+    Funcionalidade: Cadastro de Novos Usuários
+    Como um administrador do sistema OrangeHRM,
+    Para conceder acesso a diferentes membros da equipe,
+    Eu quero ser capaz de cadastrar novos usuários.
+
+    Cenário: Cadastro de Usuário com Sucesso e Visualização de Detalhes
+        Dado que estou logado como administrador no sistema OrangeHRM
+        Quando eu navego para a tela de "Add Employee", preencho os detalhes do novo usuário (nome, sobrenome, nome de usuário e senha) e salvo
+        Então o novo usuário deve ser cadastrado com sucesso
+        E seus detalhes devem ser exibidos na tela de "Personal Details"
+
+    Cenário: Login com as Credenciais do Novo Usuário
+        Dado que um novo usuário foi cadastrado
+        Quando eu realizo o logout e tento fazer login com as credenciais do novo usuário
+        Então o login deve ser bem-sucedido
+        E o usuário deve ser redirecionado para o Dashboard
+
+    Cenário: Verificação das Informações do Novo Usuário em "My Info"
+        Dado que estou logado com o novo usuário
+        Quando eu acesso a seção de "My Info"
+        Então as informações de nome fornecidas durante o cadastro devem ser exibidas corretamente
+
+🗑️ Exclusão de Usuário
+    Funcionalidade: Exclusão de Usuários Existentes
+    Como um administrador do sistema OrangeHRM,
+    Para gerenciar os acessos ao sistema,
+    Eu quero ser capaz de deletar usuários existentes.
+
+    Cenário: Exibição da Confirmação de Exclusão
+        Dado que estou logado como administrador no sistema OrangeHRM
+        Quando eu navego para a seção de administração de usuários, busco por um usuário específico e clico no botão de deletar correspondente
+        Então uma tela de confirmação de exclusão deve ser exibida
+
+    Cenário: Usuário Removido com Sucesso e Confirmação de Ausência
+        Dado que a tela de confirmação de exclusão é exibida
+        Quando eu confirmo a exclusão
+        Então o usuário deve ser removido do sistema
+        E uma mensagem indicando "No Records Found" deve ser exibida ao realizar uma nova busca por esse usuário

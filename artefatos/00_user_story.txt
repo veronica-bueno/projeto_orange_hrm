@@ -1,0 +1,116 @@
+    
+    USER STORY & CRITÉRIOS DE ACEITAÇÃO
+
+🔑 Login
+    ### User Story 1: Login com Credenciais Válidas ###
+        Como um usuário do sistema OrangeHRM,
+        eu quero conseguir fazer login com minhas credenciais válidas,
+        para que eu possa acessar as funcionalidades do sistema.
+
+        Critérios de Aceitação:
+        - Dado que estou na página de login do OrangeHRM, 
+        - ao inserir um username válido e uma password válida e clicar no botão "Login", 
+        - o sistema deve redirecionar para a página principal (Dashboard).
+
+    ### User Story 2: Falha ao Logar com Credenciais Inválidas ###
+        Como um usuário do sistema OrangeHRM,
+        eu quero ser notificado quando minhas credenciais de login forem inválidas,
+        para que eu saiba que preciso inserir as informações corretas.
+
+        Critérios de Aceitação:
+        - Dado que estou na página de login do OrangeHRM, 
+        - ao inserir um username incorreto 
+        - e uma password correta e clicar no botão "Login", 
+        - uma mensagem de erro "Invalid credentials" deve ser exibida.
+
+        - Dado que estou na página de login do OrangeHRM, 
+        - ao inserir um username correto 
+        - e uma password incorreta e clicar no botão "Login", 
+        - uma mensagem de erro "Invalid credentials" deve ser exibida.
+
+    ### User Story 3: Validação de Campos Obrigatórios no Login ###
+        Como um usuário do sistema OrangeHRM,
+        eu quero ser notificado sobre quais campos são obrigatórios na tela de login,
+        para que eu possa fornecer todas as informações necessárias para acessar o sistema.
+
+        Critérios de Aceitação:
+        - Dado que estou na página de login do OrangeHRM, 
+        - ao deixar o campo de username em branco, inserir uma password válida 
+        - e clicar no botão "Login", 
+        - uma mensagem de erro indicando "Required" deve ser exibida para o campo de username.
+
+        - Dado que estou na página de login do OrangeHRM, 
+        - ao inserir um username válido, deixar o campo de password em branco 
+        - e clicar no botão "Login", 
+        - uma mensagem de erro indicando "Required" deve ser exibida para o campo de password.
+
+🚪 Logout
+    ### User Story 1: Realizar Logout do Sistema com Sucesso ###
+        Como um usuário do sistema OrangeHRM,
+        eu quero ter a opção de fazer logout da minha sessão,
+        para garantir a segurança da minha conta quando eu terminar de usar o sistema.
+
+        Critérios de Aceitação:
+        - Dado que estou logado no sistema OrangeHRM, 
+        - ao clicar no menu do usuário 
+        - e selecionar a opção "Logout", 
+        - o sistema deve redirecionar para a página de login.
+
+🖥️ Dashboard
+    ### User Story 1: Visualizar e Interagir com Elementos Principais do Dashboard ###
+        Como um usuário logado no sistema OrangeHRM,
+        eu quero visualizar e interagir com os elementos principais do Dashboard,
+        para que eu possa navegar pelo sistema e acessar as informações relevantes.
+
+        Critérios de Aceitação:
+        - Dado que estou logado no sistema OrangeHRM, 
+        - os itens do menu lateral (Admin, PIM, Leave, Time, etc.) devem estar visíveis 
+        - e clicáveis, permitindo a navegação para as respectivas seções.
+
+        - Dado que estou logado no sistema OrangeHRM, 
+        - o botão para recolher/expandir o menu lateral deve funcionar corretamente.
+
+        - Dado que estou logado no sistema OrangeHRM, 
+        - o campo de pesquisa deve estar visível 
+        - e permitir a inserção de texto.
+
+        - Dado que estou logado no sistema OrangeHRM, 
+        - o cabeçalho (incluindo o menu do usuário) deve estar visível 
+        - e as opções como "About" 
+        - e "Support" devem ser acessíveis e funcionais.
+
+➕ Cadastro de Usuário
+    ### User Story 1: Cadastrar Usuário com Sucesso ###
+        Como um administrador do sistema OrangeHRM,
+        eu quero ser capaz de cadastrar novos usuários,
+        para que eu possa conceder acesso ao sistema para diferentes membros da equipe.
+
+        Critérios de Aceitação:
+        - Dado que estou logado como administrador no sistema OrangeHRM, 
+        - ao navegar para a tela de "Add Employee", preencher os detalhes do novo usuário (nome, sobrenome, nome de usuário e senha) 
+        - e salvar, o novo usuário deve ser cadastrado com sucesso 
+        - e seus detalhes exibidos na tela de "Personal Details".
+        
+        - Dado que um novo usuário foi cadastrado, 
+        - ao realizar o logout 
+        - e tentar fazer login com as credenciais do novo usuário, o login deve ser bem-sucedido 
+        - e o usuário deve ser redirecionado para o Dashboard.
+        
+        - Dado que estou logado com o novo usuário, 
+        - ao acessar a seção de "My Info", 
+        - as informações de nome fornecidas durante o cadastro devem ser exibidas corretamente.
+
+🗑️ Exclusão de Usuário
+    ### User Story 1: Deletar um Usuário do Sistema com Sucesso ###
+        Como um administrador do sistema OrangeHRM,
+        eu quero ser capaz de deletar usuários existentes,
+        para poder gerenciar os acessos ao sistema conforme necessário.
+
+        Critérios de Aceitação:
+        - Dado que estou logado como administrador no sistema OrangeHRM, 
+        - ao navegar para a seção de administração de usuários, buscar por um usuário específico 
+        - e clicar no botão de deletar correspondente, uma tela de confirmação de exclusão deve ser exibida.
+
+        - Dado que foi realizado a exclusão, o usuário deve ser removido do sistema, 
+        - e uma mensagem indicando "No Records Found" deve ser exibida 
+        - ao realizar uma nova busca por esse usuário.

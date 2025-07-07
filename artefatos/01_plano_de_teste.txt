@@ -1,0 +1,48 @@
+## Test Plan ##
+- Objetivo
+    Validar a funcionalidade completa das principais interações do usuário com o sistema OrangeHRM, incluindo Login, Logout, navegação e interação com o Dashboard, Cadastro de Novos Usuários e Exclusão de Usuários. O objetivo é garantir que todas as operações funcionem conforme o esperado, com as validações de interface e redirecionamentos corretos.
+
+- Escopo
+    - Testes de Interface Gráfica do Usuário (GUI) e fluxo de usuário para as funcionalidades:
+        - Login: Acessar o sistema com diferentes cenários de credenciais (válidas, inválidas, ausentes).
+        - Logout: Sair do sistema de forma segura.
+        - Dashboard: Verificar visibilidade e interatividade dos elementos principais da tela após o login
+        - Cadastro de Usuário: Criar um novo usuário no sistema e validar seu acesso.
+        - Exclusão de Usuário: Remover um usuário existente do sistema.
+
+- Operações cobertas:
+    Login com sucesso: Acesso ao sistema com credenciais válidas.
+    Login com falha: Tentativas de login com credenciais inválidas ou campos em branco, e validação de mensagens de erro.
+    Logout: Desconexão da sessão ativa.
+    Navegação no Dashboard: Verificação da visibilidade e funcionalidade de itens do menu lateral, botão de expandir/recolher menu, campo de pesquisa e cabeçalho.
+    Criação de Usuário: Fluxo completo de adição de um novo empregado/usuário, incluindo a verificação do cadastro e o login com as novas credenciais.
+    Exclusão de Usuário: Fluxo de remoção de um usuário existente e confirmação da exclusão.
+
+- Validações:
+    Redirecionamentos de página: Verificação se o usuário é direcionado para as telas corretas após cada ação (ex: Dashboard após login, tela de login após logout).
+    Mensagens de erro e sucesso: Validação do texto e visibilidade das mensagens esperadas (ex: "Invalid credentials", "Required", "No Records Found").
+    Visibilidade de elementos: Confirmação de que os elementos da interface estão presentes e visíveis nas telas esperadas.
+    Interação com elementos: Teste da funcionalidade de botões, campos de texto e menus (ex: cliques, inserção de texto, recolhimento/expansão).
+    Integridade de dados: Verificação da correta persistência e exibição de dados recém-cadastrados (ex: nome do novo usuário em "My Info").
+    Comportamento em cenários de falha: Verificação da resposta do sistema a inputs inválidos ou incompletos.
+
+Ferramentas/Bibliotecas
+    Robot Framework: Para automação dos testes.
+    SeleniumLibrary: Para interação com o navegador web e elementos da GUI.
+    Recursos/Keywords customizadas: Reutilização de funções específicas para abstrair passos comuns e manter a organização do código (ex: login.resource, logout.resource, dashboard.resource, cadastro.resource, delete.resource).
+    Python: Linguagem de programação base para o Robot Framework e suas bibliotecas.
+
+Ambiente
+Aplicação Testada: OrangeHRM (ambiente web).
+URLs Principais:
+Página de Login: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+
+
+Credenciais de Teste:
+    Administrador: admin_username, admin_password (definidos em config.resource)
+
+QA Responsável
+    Verônica Bueno
+
+Cronograma
+    9 horas

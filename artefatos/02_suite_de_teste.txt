@@ -1,0 +1,29 @@
+### Test Set ###
+
+- Cenarios de Testes: Login
+    Realizar o login com sucesso
+    Tentativa de login com username incorreto e password correta
+    Tentativa de login com username correto e password incorreta
+    Validar mensagem de credenciais inválidas
+    Tentativa de login com username em branco
+    Tentativa de login com password em branco
+    Verificar mensagem de dados obrigatórios
+    
+- Cenarios de Testes: Logout 
+    Realizar o logout com sucesso
+
+- Cenarios de Testes: Dashboard
+    Validar se itens do menu lateral estão visíveis e clicaveis
+    Validar botão do menu lateral
+    Validar campo de pesquisa
+    Validar cabeçalho
+
+- Cenarios de Testes: Cadastro de usuário
+    Cadastrar usuário no sistema com sucesso
+    Confirmar o cadastro do usuário
+    Acesso do usuário novo cadastrado
+    Confirmar que está na página de dashboard após novo login
+
+- Cenarios de Testes: Deletar um usuário do sistema com sucesso
+    Acessar cadastro de administrador
+    Deletar o cadastro de um usuário existente
