@@ -14,22 +14,18 @@
 - Os testes automatizados cobrem as seguintes áreas e módulos da aplicação OrangeHRM, conforme a organização dos arquivos de teste:
 
 * **Login:**
-    * Login com credenciais válidas (```US-01-login-valido```).
-
-    * Login com credenciais incorretas (```US-02-login-incorreto```).
-
-    * Login com campos obrigatórios em branco (```US-03-login-campos-obrigatórios```).
+    * Login com credenciais válidas, tentativas de login e login com campos obrigatórios (```login```).
 
 * **Logout:**
-    * Realizar o logout do sistema com sucesso e ser redirecionado para a página de login (```US-04-logout```).
+    * Realizar o logout do sistema com sucesso e ser redirecionado para a página de login (```logout```).
 
 * **Dashboard:**
-    * Visualizar e interagir com elementos principais do Dashboard, incluindo menu lateral, botão de recolhimento, campo de pesquisa e cabeçalho (```US-05-dashboard```).
+    * Visualizar e interagir com elementos principais do Dashboard, incluindo menu lateral, botão de recolhimento, campo de pesquisa e cabeçalho (```dashboard```).
 
 * **Gerenciamento de Usuários (Módulo Admin):**
-    * Cadastrar um novo usuário com sucesso, confirmando o cadastro e realizando login com as novas credenciais (```US-06-cadastrar-usuario```).
+    * Cadastrar um novo usuário com sucesso, confirmando o cadastro e realizando login com as novas credenciais (```cadastro```).
 
-    * Deletar um usuário existente do sistema com sucesso através da interface de administração (```US-07-deletar-usuario```).
+    * Deletar um usuário existente do sistema com sucesso através da interface de admin (```delete```).
 
 #### Tecnologias e Ferramentas Utilizadas
 * Robot Framework
