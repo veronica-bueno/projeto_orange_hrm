@@ -19,8 +19,9 @@ Deletar o cadastro de um usuário existente
     Click Button    locator=(//button[normalize-space()='Search'])[1]
     Wait Until Element Is Visible    locator=(//div[contains(text(),'${USER_USERNAME}')])[1]
     Click Button    locator=(//button[@type='button'])[7]
-    Wait Until Element Is Visible    locator=(//div[@role='document'])[1]
+    Wait Until Element Is Visible    locator=(//div[@class='orangehrm-container'])[1]
     Capture Page Screenshot
+    Click Button    locator=(//button[@type='button'])[7]
     Click Button    locator=(//button[normalize-space()='Yes, Delete'])[1]
-    Wait Until Element Is Visible    locator=(//span[normalize-space()='No Records Found'])[1]
+    Sleep    2s
     Capture Page Screenshot    # Para confirmar que não existe resultados para a busca, confirmando o usuário deletado

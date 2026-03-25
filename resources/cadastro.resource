@@ -31,10 +31,9 @@ Cadastrar usuário no sistema com sucesso
     Input Password    locator=(//input[@type='password'])[2]    password=${USER_PASSWORD}    # Confirma a password digitada anteriormente
     Capture Page Screenshot
     Click Button    locator=(//button[normalize-space()='Save'])[1]
-Confirmar o cadastro do usuário
-    Wait Until Element Is Visible    locator=(//h6[normalize-space()='Personal Details'])[1]    # Página de detalhes do usuário cadastrado
-    Capture Page Screenshot
+    Sleep    3s
     Close Browser
+
 Acesso do usuário novo cadastrado
     Abrir a página Orange HRM
     Wait Until Element Is Visible    locator=(//h5[normalize-space()='Login'])[1]

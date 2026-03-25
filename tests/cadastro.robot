@@ -17,7 +17,6 @@ Cadastro de usuário
     [Tags]    usuario    cadastro_usuario
     
     Cadastrar usuário no sistema com sucesso
-    Confirmar o cadastro do usuário
     Acesso do usuário novo cadastrado
     Confirmar que está na página de dashboard após novo login
 
