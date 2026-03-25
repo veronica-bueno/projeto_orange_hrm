@@ -114,7 +114,7 @@ projeto_orange_hrm/
 ```
 **2. Para executar uma suíte de teste específica (ex: login válido):**
 ```bash
-    robot -d reports tests/US-01-login-valido.robot
+    robot -d reports tests/login-valido.robot
 ```
 **3. Para executar todos os testes em uma pasta (ex: todos os testes na pasta ```tests```):**
 ```bash
